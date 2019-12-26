@@ -24,7 +24,7 @@ No repositório `/settings/hooks` configuramos um webhook.
 
 Dessa forma "avisamos" o Jenkins que houve um push.
 
-## Criar um Pipeline no Jenkins
+## Criar um [Pipeline](https://jenkins.io/doc/book/pipeline/) no Jenkins
 
 Pipeline é um conjunto de tarefas executadas quando disparado um certo evento, no nosso caso um Push no GitHub.
 
@@ -92,8 +92,8 @@ Criaremos as seguintes tarefas para serem rodadas em paralelo:
 - Lint
 - Coverage
 
-No mesmo padrão de mostrar apenas um console e fingir que deu tudo certo. Toda vez ele vai pedir para salvar, mas é isso.
+No mesmo padrão de mostrar apenas um console e fingir que deu tudo certo. Toda vez ele vai pedir para salvar.
 
+Agora a última tarefa "deploy" é dependente dessas 3. O resultado será mais ou menos isso.
 
-
-
+![image](https://user-images.githubusercontent.com/27368585/71491490-bdabe100-280f-11ea-8576-75f31f0c9844.png)
