@@ -97,3 +97,10 @@ No mesmo padrão de mostrar apenas um console e fingir que deu tudo certo. Toda 
 Agora a última tarefa "deploy" é dependente dessas 3. O resultado será mais ou menos isso.
 
 ![image](https://user-images.githubusercontent.com/27368585/71491490-bdabe100-280f-11ea-8576-75f31f0c9844.png)
+
+## Configurar o GitHub
+
+Algo que já temos funcionando é quando abrirmos um "Pull Request" já vemos se o pipeline teve sucesso.
+
+![image](https://user-images.githubusercontent.com/27368585/71491688-c8b34100-2810-11ea-8026-e4fce5b44342.png)
+
