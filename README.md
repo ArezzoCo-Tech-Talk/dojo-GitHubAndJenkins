@@ -28,8 +28,6 @@ Dessa forma "avisamos" o Jenkins que houve um push.
 
 Pipeline é um conjunto de tarefas executadas quando disparado um certo evento, no nosso caso um Push no GitHub.
 
-Essa configuração fica no arquivo [JenkinsFile](https://jenkins.io/doc/book/pipeline/jenkinsfile/) na raíz do repositório. O plugin Blue Ocean faz o trabalho de criar esse arquivo para nós de forma mais intuitiva.
-
 Então na navegação da esquerda Jenkins acessamos esse plugin.
 
 ![image](https://user-images.githubusercontent.com/27368585/71487294-4bc89d00-27f9-11ea-8c1d-13ce2d31e714.png)
@@ -40,5 +38,18 @@ Essa ferramenta também auxilia a visualizar os Pipeline e suas tarefas
 
 - Agora acessamos "New Pipeline".
 - Em "Where do you store your code?" marcamos GitHub.
+- Em "Connect to GitHub" podemos clicar em "Create an access token here." que nos levará ao GitHub já marcando as permissões necessárias.
 - Em "Which organization does the repository belong to?" é o GitHub que estarás configurando.
 - Em "Choose a repository" o repositório
+
+![image](https://www.vogella.com/tutorials/Jenkins/img/jenkins_pipeline30.png)
+
+O Pipeline ficará com o nome do repositório a não ser que renomeamos.
+
+## Criar o Jenkinsfile
+
+É a configuração das tarefas que serão executadas no respectivo Pipeline.
+
+Essa configuração fica no arquivo [JenkinsFile](https://jenkins.io/doc/book/pipeline/jenkinsfile/) na raíz do repositório. O plugin Blue Ocean faz o trabalho de criar esse arquivo para nós de forma mais intuitiva.
+
+![image](https://user-images.githubusercontent.com/27368585/71489803-37d76800-2806-11ea-8bb2-e413de7caf98.png)
