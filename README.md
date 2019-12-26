@@ -58,7 +58,7 @@ Agora se clicarmos em "Create Pipeline" vamos incluir os passos que queremos exe
 
 Agora na tela do editor do pipeline vamos no (+) para criar um novo passo.
 
-![image](https://user-images.githubusercontent.com/27368585/71490212-82f27a80-2808-11ea-982c-8c0c11492a9d.png)
+![image](https://user-images.githubusercontent.com/27368585/71491295-ac160980-280e-11ea-8588-fa9336c750a4.png)
 
 Vamos agora apenas simular que estamos executando tarefas de verdade colocando apenas mensagens no console.
 
@@ -92,7 +92,7 @@ Criaremos as seguintes tarefas para serem rodadas em paralelo:
 - Lint
 - Coverage
 
-No mesmo padrão de mostrar apenas um console e fingir que deu tudo certo. Toda vez ele vai pedir para salvar.
+No mesmo padrão de mostrar apenas um console e fingir que deu tudo certo. Toda vez ele vai pedir para salvar, mas é isso.
 
 
 
