@@ -128,7 +128,7 @@ Algo que já temos funcionando é quando abrirmos um "Pull Request" já vemos se
 
 Mas não por que uma checagem falhou que você não possa fazer "merge" dessa branch.
 
-### [Definindo se uma branch é "mergeável](https://help.github.com/en/github/administering-a-repository/enabling-required-status-checks)"
+### [Definindo se uma branch é "mergeável"](https://help.github.com/en/github/administering-a-repository/enabling-required-status-checks)
 
 Para uma checagem ser bloqueante precisamos, no repositório:
 
