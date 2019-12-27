@@ -2,6 +2,12 @@
 
 Passo a passo para configurar e utilizar as duas ferramentas.
 
+Este documento contém:
+
+- Configurar Jenkins
+- Configurar o GitHub
+- Criar o arquivo de pipelines Jenkinsfile no repositório
+
 ### Requisitos prévios
 
 - Jenkins já funcionando
@@ -66,8 +72,8 @@ Começamos pela tarefa "Build" que fingirá compilar nosso projeto.
 
 - Em "Name your stage" colocar "Build".
 - "+ Add step."
-- "Shell Script".
-- O comando do "Build / Shell Script" será `echo 'build'`.
+- "Print Message".
+- O comando do "Build / Print Message" será `echo 'build'`.
 - Save
 
 Como mencionado acima o "Blue Ocean" auxilia na criação do arquivo "Jenkinsfile", então agora temos que escolher em que branch vamos salvar esse arquivo.
@@ -75,6 +81,21 @@ Como mencionado acima o "Blue Ocean" auxilia na criação do arquivo "Jenkinsfil
 ![image](https://user-images.githubusercontent.com/27368585/71490677-d36ad780-280a-11ea-837b-0092dccc9012.png)
 
 Após ele rodar podemos ver o resultado daquela tarefa na respectiva branch.
+
+**Jenkinsfile**
+```groovy
+pipeline {
+  agent any
+  stages {
+    stage('build') {
+      steps {
+        echo 'build'
+      }
+    }
+
+  }
+}
+```
 
 ![image](https://user-images.githubusercontent.com/27368585/71490862-fea1f680-280b-11ea-97f2-dd3bf9c807db.png)
 
@@ -102,5 +123,33 @@ Agora a última tarefa "deploy" é dependente dessas 3. O resultado será mais o
 
 Algo que já temos funcionando é quando abrirmos um "Pull Request" já vemos se o pipeline teve sucesso.
 
-![image](https://user-images.githubusercontent.com/27368585/71491688-c8b34100-2810-11ea-8026-e4fce5b44342.png)
+![image](https://user-images.githubusercontent.com/27368585/71515418-db199300-2881-11ea-850d-f2cd98dd4b64.png)
 
+Mas não por que uma checagem falhou que você não possa fazer "merge" dessa branch.
+
+### [Definindo se uma branch é "mergeável](https://help.github.com/en/github/administering-a-repository/enabling-required-status-checks)"
+
+Para uma checagem ser bloqueante precisamos, no repositório:
+
+- ir em "settings".
+- ir em "branches".
+- se não existe regra para a branch ir em "Add rule".
+- marcar "Require status checks to pass before merging".
+- marcar "Require branches to be up to date before merging" para sempre re-verificar quando houver commit.
+- marcar "WIP", deveria ser padrão ativado para evitar merge de branch com trabalho inacabado.
+- marcar "continuous-integration/jenkins/pr-request", não marcar o "branch", pois ele mostra um "histórico" dos commits, e podem haver alguns que falharam nos testes.
+
+![image](https://user-images.githubusercontent.com/27368585/71523875-a91c2700-28a9-11ea-98b2-6855bcb88184.png)
+
+## Sugestão de próximos passos
+
+### Integração com o slack
+
+Os passos de um pileline pode ser de vários tipos, entre eles de integração com o Slack. Pode-se então avisar quando começar o pipeline e avisar quando acaba, se deu certo ou não.
+
+![image](https://user-images.githubusercontent.com/27368585/71516530-38184780-2888-11ea-833c-6cea3cf7e25b.png)
+
+## Referências
+
+- https://www.vogella.com/tutorials/Jenkins/article.html
+- https://applitools.com/blog/how-to-update-jenkins-build-status-in-github-pull-requests-step-by-step-tutorial?utm_referrer=https://www.google.com/
