@@ -35,6 +35,8 @@ Dessa forma "avisamos" o Jenkins que houve um push.
 
 Pipeline é um conjunto de tarefas executadas quando disparado um certo evento, no nosso caso um Push no GitHub.
 
+Estamos criando um Pipeline "Multibranch".
+
 Então na navegação da esquerda Jenkins acessamos esse plugin.
 
 ![image](https://www.vogella.com/tutorials/Jenkins/img/jenkins_pipeline10.png)
@@ -163,6 +165,9 @@ No caso dos Monorepos, ou Monolitos, é preciso adotar uma estratégia para evit
 Algumas formas:
 
 - Com o atributo "changeset" no pipeline, [StackExchange](https://devops.stackexchange.com/questions/4355/triggering-specific-pipeline-builds-for-monorepos-in-jenkins/6678#6678), [Jenkins Pipeline](https://jenkins.io/doc/book/pipeline/syntax/).
+- Usando [Lerna](https://github.com/lerna/lerna) e [Bazel](https://github.com/bazelbuild/bazel)
+
+Um material que pode ajudar na escolha é o [Monorepo vs. polyrepo](https://github.com/joelparkerhenderson/monorepo_vs_polyrepo) do joelparkerhenderson.
 
 ## Referências
 
