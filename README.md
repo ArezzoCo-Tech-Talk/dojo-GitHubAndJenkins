@@ -8,16 +8,17 @@ Este documento contém:
 - Configurar o GitHub
 - Criar o arquivo de pipelines Jenkinsfile no repositório
 
-### Requisitos prévios
+## Requisitos prévios
 
 - Jenkins já funcionando
 - Um repositório no GitHub
 
-## Intalar os Plugins necessários no Jenkins
+### Intalar os Plugins necessários no Jenkins
 
 - Hudson Post Build Task
 - GitHub integration plugin
 - [Blue Ocean plugin](https://jenkins.io/projects/blueocean/)
+- [Embeddable Build Status](https://wiki.jenkins.io/display/JENKINS/Embeddable+Build+Status+Plugin)
 
 Estes serão explicados abaixo.
 
@@ -137,9 +138,15 @@ Para uma checagem ser bloqueante precisamos, no repositório:
 - marcar "Require status checks to pass before merging".
 - marcar "Require branches to be up to date before merging" para sempre re-verificar quando houver commit.
 - marcar "WIP", deveria ser padrão ativado para evitar merge de branch com trabalho inacabado.
-- marcar "continuous-integration/jenkins/pr-request", não marcar o "branch", pois ele mostra um "histórico" dos commits, e podem haver alguns que falharam nos testes.
+- marcar "continuous-integration/jenkins/pr-request" e "continuous-integration/jenkins/pr-request" (não sei muito bem a diferença, as vezes só aparece um desses no check).
 
-![image](https://user-images.githubusercontent.com/27368585/71523875-a91c2700-28a9-11ea-98b2-6855bcb88184.png)
+![image](https://user-images.githubusercontent.com/27368585/71518054-a3b1e300-288f-11ea-846d-1802000aaad5.png)
+
+### Mostrando o "status" da branch no "README" do GitHub
+
+Agora usaremos o plugin "Embeddable Build Status" que instalamos no Jenkins.
+
+![image](https://wiki.jenkins.io/download/attachments/60918124/snapshot1.png?version=1&modificationDate=1422604732000&api=v2)
 
 ## Sugestão de próximos passos
 
@@ -148,6 +155,14 @@ Para uma checagem ser bloqueante precisamos, no repositório:
 Os passos de um pileline pode ser de vários tipos, entre eles de integração com o Slack. Pode-se então avisar quando começar o pipeline e avisar quando acaba, se deu certo ou não.
 
 ![image](https://user-images.githubusercontent.com/27368585/71516530-38184780-2888-11ea-833c-6cea3cf7e25b.png)
+
+### Não rodar todos os testes de um "Monorepo" a cada commit
+
+No caso dos Monorepos, ou Monolitos, é preciso adotar uma estratégia para evitar que todas as tarefas sejam rodadas a cada push que feito.
+
+Algumas formas:
+
+- Com o atributo "changeset" no pipeline, [StackExchange](https://devops.stackexchange.com/questions/4355/triggering-specific-pipeline-builds-for-monorepos-in-jenkins/6678#6678), [Jenkins Pipeline](https://jenkins.io/doc/book/pipeline/syntax/).
 
 ## Referências
 
