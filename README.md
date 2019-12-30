@@ -156,7 +156,7 @@ Vamos incluir no README.md do nosso projeto a seguinte marcação.
 
 **Explicando essa linha:** primeiro adicionamos a imagem do status `![qualquer coisa aqui](caminho da imagem de status no Jenkins)`, por tratar-se de um "Multibranch Pipeline" precisamos especificar, a branch também `?job=continuous-integration/master`, porém como na [documentação](https://github.com/jenkinsci/embeddable-build-status-plugin/blob/master/README.md) do plugin é preciso fazer encode dessa string, que fica `?job=continuous-integration%2Fmaster`. Na segunda parte apenas envolvemos isso em um link que leva para o Jenkins.
 
-![image](https://wiki.jenkins.io/download/attachments/60918124/snapshot1.png?version=1&modificationDate=1422604732000&api=v2)
+Resultado: ![image](https://raw.githubusercontent.com/jenkinsci/embeddable-build-status-plugin/master/src/doc/plastic_unconfigured.svg?sanitize=true)
 
 ## Sugestão de próximos passos
 
