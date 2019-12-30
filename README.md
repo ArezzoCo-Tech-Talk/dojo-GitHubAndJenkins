@@ -177,6 +177,14 @@ Algumas formas:
 
 Um material que pode ajudar na escolha é o [Monorepo vs. polyrepo](https://github.com/joelparkerhenderson/monorepo_vs_polyrepo) do joelparkerhenderson.
 
+### Quebrar o pipeline em tarefas
+
+O pipeline seja um acionador de "jobs" com seu próprio fluxo, evitando assim um pipeline muito extenso.
+
+### Continuous Deployment
+
+Deploy automático quando chegar na branch master.
+
 ## Referências
 
 - https://www.vogella.com/tutorials/Jenkins/article.html
