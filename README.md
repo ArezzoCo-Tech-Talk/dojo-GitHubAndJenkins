@@ -148,6 +148,14 @@ Para uma checagem ser bloqueante precisamos, no repositório:
 
 Agora usaremos o plugin "Embeddable Build Status" que instalamos no Jenkins.
 
+Vamos incluir no README.md do nosso projeto a seguinte marcação.
+
+```markdown
+[![Build Status](http://caminho-do-jenkins/buildStatus/icon?job=nome-do-pipeline%2Fbranch)](http://caminho-do-jenkins/blue/organizations/jenkins/nome-do-pipeline/activity)
+```
+
+**Explicando essa linha:** primeiro adicionamos a imagem do status `![qualquer coisa aqui](caminho da imagem de status no Jenkins)`, por tratar-se de um "Multibranch Pipeline" precisamos especificar, a branch também `?job=continuous-integration/master`, porém como na [documentação](https://github.com/jenkinsci/embeddable-build-status-plugin/blob/master/README.md) do plugin é preciso fazer encode dessa string, que fica `?job=continuous-integration%2Fmaster`. Na segunda parte apenas envolvemos isso em um link que leva para o Jenkins.
+
 ![image](https://wiki.jenkins.io/download/attachments/60918124/snapshot1.png?version=1&modificationDate=1422604732000&api=v2)
 
 ## Sugestão de próximos passos
