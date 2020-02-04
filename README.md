@@ -29,7 +29,7 @@ No repositório `/settings/hooks` configuramos um webhook.
 - Payload URL: `<http://your_jenkins_server_url>/github-webhook/`
 - Which events would you like to trigger this webhook? Just the push event.
 
-Dessa forma "avisamos" o Jenkins que houve um push.
+Dessa forma "avisamos" que houve um push e o Jenkins fica sabendo pelo plugin "GitHub integration".
 
 ## Criar um [Pipeline](https://jenkins.io/doc/book/pipeline/) no Jenkins
 
@@ -124,7 +124,7 @@ Agora a última tarefa "deploy" é dependente dessas 3. O resultado será mais o
 
 ## Configurar o GitHub
 
-Algo que já temos funcionando é quando abrirmos um "Pull Request" já vemos se o pipeline teve sucesso, isso graças ao "Hudson Post Build Task".
+Algo que já temos funcionando é quando abrirmos um "Pull Request" já vemos se o pipeline teve sucesso, isso graças ao plugin "Hudson Post Build Task".
 
 ![image](https://user-images.githubusercontent.com/27368585/71515418-db199300-2881-11ea-850d-f2cd98dd4b64.png)
 
