@@ -37,7 +37,7 @@ Pipeline é um conjunto de tarefas executadas quando disparado um certo evento, 
 
 Estamos criando um Pipeline "Multibranch".
 
-Então na navegação da esquerda Jenkins acessamos esse plugin.
+Então na navegação da esquerda Jenkins acessamos o plugin "Blue Ocean".
 
 ![image](https://www.vogella.com/tutorials/Jenkins/img/jenkins_pipeline10.png)
 
