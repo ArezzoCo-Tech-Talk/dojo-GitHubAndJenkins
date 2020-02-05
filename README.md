@@ -124,7 +124,7 @@ Agora a última tarefa "deploy" é dependente dessas 3. O resultado será mais o
 
 ## Configurar o GitHub
 
-Algo que já temos funcionando é quando abrirmos um "Pull Request" já vemos se o pipeline teve sucesso, isso graças ao plugin "Hudson Post Build Task".
+Algo que já temos funcionando é quando abrirmos um "Pull Request" já vemos se o pipeline teve sucesso, isso graças ao plugin "Hudson Post Build Task" e o [nosso token](https://github.com/settings/tokens) fornecido para o Jenkins nos "representar" lá no GitHub.
 
 ![image](https://user-images.githubusercontent.com/27368585/71515418-db199300-2881-11ea-850d-f2cd98dd4b64.png)
 
