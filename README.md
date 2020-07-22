@@ -166,7 +166,7 @@ Os passos de um pileline pode ser de vários tipos, entre eles de integração c
 
 ![image](https://user-images.githubusercontent.com/27368585/71516530-38184780-2888-11ea-833c-6cea3cf7e25b.png)
 
-### Não rodar todos os testes de um "Monorepo" a cada commit
+### Não rodar todos os testes de um "Monolito" a cada commit
 
 No caso dos Monorepos, ou Monolitos, é preciso adotar uma estratégia para evitar que todas as tarefas sejam rodadas a cada push que feito.
 
