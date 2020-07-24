@@ -1,6 +1,6 @@
 # Integração contínua Jenkins + GitHub
 
-![image](https://user-images.githubusercontent.com/27368585/88398955-81883100-cd9c-11ea-907c-9d337ea8904f.png)
+![image](https://user-images.githubusercontent.com/27368585/88399490-57833e80-cd9d-11ea-9eed-9a8ef2d3e07c.png)
 
 Passo a passo para configurar e utilizar as duas ferramentas.
 
